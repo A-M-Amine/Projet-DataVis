@@ -14,3 +14,29 @@
 }
 
 
+#USTHB {
+
+    fill: rgba(35, 44, 36, 0.247);
+}
+
+
+#tooltip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+    width: 150px;
+    height: 50px;
+    padding: 2px;
+    font: 12px;
+    background: rgb(19, 100, 206);
+    box-shadow: 1px 1px 10px;
+    border-radius: 2px;
+    pointer-events: none;
+    opacity: 90%;
+}
+
+#tooltip.hidden {
+    display: none;
+}
