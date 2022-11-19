@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     //Width and height
-    let w = 700;
-    let h = 525;
+    let w = 920;
+    let h = 620;
     const margin = { top: 20, right: 20, bottom: 110, left: 55 }
 
     //Define map projection
@@ -41,41 +41,85 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // functions
 
-            function getLocById(loc) {
+            function highlightDay(day) {
 
-                let regSalleDep = /^TP/
-                let regSalle
+                for (ele in day) {
+                    if(Object.keys(day[ele].cours).length != 0) {
+                        id = day[ele].cours.loc
+                        d3.select("[id='" + id + "']")
+                            .style("fill", "red");
+
+                    }else {
+                        if(day[ele].groups.hasOwnProperty('G1')) {
+                            id = day[ele].groups.G1.loc
+                            
+                            d3.select("[id='" + id + "']")
+                                .style("fill", "red");
+                        }
+                        if(day[ele].groups.hasOwnProperty('G2')) {
+                            id = day[ele].groups.G2.loc
+                            d3.select("[id='" + id + "']")
+                                .style("fill", "green");
+                        }
+                        
+                    }
+                    
+                }
+
+            };
+
+
+            let mouseOn = function (d) {
+                if(d.properties["name"] != "USTHB") {
+                    let cord = d3.mouse(this)
+                    let xpos = parseFloat(cord[0] + 10);
+                    let ypos = parseFloat(cord[1]);
+        
+        
+                    d3.select("#tooltip")
+                        .style("left", xpos + "px")
+                        .style("top", ypos + "px")
+                        .select("#value")
+                        .text("hh")
+        
+                    d3.select("#tooltip")
+                        .classed("hidden", false)
+                }
+                
+            }
+    
+    
+            let mouseOff = function (d) {
+                
+                d3.select("#tooltip")
+                    .classed("hidden", true)
             }
 
 
 
-
+            // creating map
             svg.selectAll("path")
                 .data(json.features)
                 .enter()
                 .append("path")
                 .attr("d", path)
-                .attr("class", (d, i) => "loc" + i + " cl1")
-                // .attr("class", )
-                .on("mouseover", function (d, i) {
-                    if (d["properties"]["name"] != "USTHB") {
-                        d3.select(this).style("fill", "coral");
-                    }
+                .attr("class", "cl1")
+                .attr("id", function(d) {
+                    if (Object.hasOwnProperty.call(d.properties, "name")) {
+                        return d.properties.name;
+                    } 
+                    
                 })
-                .on("mouseout", function (d) {
-                    d3.select(this).style("fill", "white")
-                });
+                .on("mouseover", mouseOn)
+                .on("mouseout", mouseOff);
+            
 
-            
+            //TODO make days and semestre change by user input
             day = prog.days.Dim;
+
+            highlightDay(day);
             
-            for ( ele in day) {
-                if(ele == 1) {
-                    console.log(day[ele].cours.loc.split(" ")[1]);
-                    d3.selectAll("path.loc7")
-                        .style("fill", "coral");
-                }
-            }
+
 
         });
     });
