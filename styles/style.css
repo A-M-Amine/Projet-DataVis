@@ -1,10 +1,10 @@
 .cl1 {
     fill: white;
     stroke: black;
+    z-index: -1;
 }
 
 .map {
-    position: absolute;
     z-index: -1;
     margin-left: auto;
     margin-right: auto;
@@ -21,22 +21,27 @@
 
 
 #tooltip {
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    text-align: center;
-    width: 150px;
-    height: 50px;
-    padding: 2px;
-    font: 12px;
-    background: rgb(19, 100, 206);
-    box-shadow: 1px 1px 10px;
-    border-radius: 2px;
-    pointer-events: none;
-    opacity: 90%;
+    text-align: left;
+    width: 180px;
+    height: 135px;
+    padding: 0px 15px;
+    border-radius: 15px 50px;
+    background-color: #73AD21;
+    background: #73AD21;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+
+
 }
 
 #tooltip.hidden {
     display: none;
+    font-size: 12px;
 }
+
+
