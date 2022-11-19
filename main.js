@@ -70,17 +70,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
             let mouseOn = function (d) {
-                if(d.properties["name"] != "USTHB") {
+
+                let location = d3.select(this).attr("id");
+                let details = getLocDetails(prog.days.Dim, location);
+                // insert function that gets the loc fro
+
+                if(details != "none") {
                     let cord = d3.mouse(this)
-                    let xpos = parseFloat(cord[0] + 10);
-                    let ypos = parseFloat(cord[1]);
+                    // let xpos = parseFloat(cord[0]+ 5);
+                    // let ypos = parseFloat(cord[1]);
         
-        
+                    
                     d3.select("#tooltip")
-                        .style("left", xpos + "px")
-                        .style("top", ypos + "px")
+                        .style("left", 10 + "px")
+                        .style("top", 10 + "px")
                         .select("#value")
-                        .text("hh")
+                        .html(details)
         
                     d3.select("#tooltip")
                         .classed("hidden", false)
@@ -96,13 +101,48 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
 
+            function getLocDetails(day, loc) {
+
+                let details = ""
+
+                for (ele in day) {
+                    if(Object.keys(day[ele].cours).length != 0 && day[ele].cours.loc == loc) {
+                        details += getObjectDetails(day[ele].cours)//TODO details func
+                    }else { 
+                        if(day[ele].groups.hasOwnProperty('G1') && day[ele].groups.G1.loc == loc) {
+                            details += getObjectDetails(day[ele].groups.G1)
+                        }
+                        if(day[ele].groups.hasOwnProperty('G2') && day[ele].groups.G2.loc == loc) {
+                            details += getObjectDetails(day[ele].groups.G2)
+                        }
+                        
+                    }
+                    
+                }
+
+                return details.length == 0 ? "none" : details;
+            }
+
+
+            function getObjectDetails(obj) {
+                let res = ""
+
+                for(const [key, value] of Object.entries(obj)) {
+                    res +=  key + " : " + value + " <br>"
+                }
+
+                return res
+            }
+
 
             // creating map
+
+            
             svg.selectAll("path")
                 .data(json.features)
                 .enter()
                 .append("path")
-                .attr("d", path)
+                .attr("d", path) 
                 .attr("class", "cl1")
                 .attr("id", function(d) {
                     if (Object.hasOwnProperty.call(d.properties, "name")) {
