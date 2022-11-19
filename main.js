@@ -1,64 +1,94 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+
     //Width and height
-    var w = 900;
-    var h = 675;
+    let w = 700;
+    let h = 525;
+    const margin = { top: 20, right: 20, bottom: 110, left: 55 }
 
     //Define map projection
-    var proj = d3.geo.mercator()
+    let proj = d3.geo.mercator()
         .rotate([1, 48.8, 0])
         .translate([0, 0])
         .scale([1]);
 
     //Define path generator
-    var path = d3.geo.path()
+    let path = d3.geo.path()
         .projection(proj);
 
 
-    var svg = d3.select("body")
+    // attach svg to body
+    let svg = d3.select("body")
         .append("svg")
         .attr("width", w)
         .attr("height", h)
         .attr("class", "map");
 
     console.log("object");
-    d3.json("mapUSTHB.geojson", function (json) {
-
-        var b = path.bounds(json);
-        console.log(b);
-        s = .99 / Math.max((b[1][0] - b[0][0]) / w, (b[1][1] - b[0][1]) / h);
-        t = [(w - s * (b[1][0] + b[0][0])) / 2, (h - s * (b[1][1] + b[0][1])) / 2];
-        console.log(s, t);
-        proj.translate(t).scale(s);
-
-        svg.append("text")
-            .text("Université des Sciences et Techniques Houari Boumediene")
-            .attr("x", "25")
-            .attr("y", "30")
-            .attr("font-size", "30px");
 
 
-        let skipFirst = 0;
-        var map = svg.selectAll("path")
-            .data(json.features);
-        map.enter()
-            .append("path")
-            .attr("d", path)
-            .attr("class", "cl1")
-            .on("mouseover", function(d, i) {
-                if(i != 0) {      
-                    d3.select(this).style("fill", "coral");
+    d3.json("mapUSTHBen.geojson", function (json) {
+        d3.json("data.JSON", function (prog) {
+
+
+            // scaling parameters
+            let b = path.bounds(json);
+            s = .99 / Math.max((b[1][0] - b[0][0]) / w, (b[1][1] - b[0][1]) / h);
+            t = [(w - s * (b[1][0] + b[0][0])) / 2, (h - s * (b[1][1] + b[0][1])) / 2];
+            proj.translate(t).scale(s);
+
+
+
+            // functions
+
+            function getLocById(loc) {
+
+                let regSalleDep = /^TP/
+                let regSalle
+            }
+
+
+
+
+            svg.selectAll("path")
+                .data(json.features)
+                .enter()
+                .append("path")
+                .attr("d", path)
+                .attr("class", (d, i) => "loc" + i + " cl1")
+                // .attr("class", )
+                .on("mouseover", function (d, i) {
+                    if (d["properties"]["name"] != "USTHB") {
+                        d3.select(this).style("fill", "coral");
+                    }
+                })
+                .on("mouseout", function (d) {
+                    d3.select(this).style("fill", "white")
+                });
+
+            
+            day = prog.days.Dim;
+            
+            for ( ele in day) {
+                if(ele == 1) {
+                    console.log(day[ele].cours.loc.split(" ")[1]);
+                    d3.selectAll("path.loc7")
+                        .style("fill", "coral");
                 }
-            })
-            .on("mouseout", function(d) {
-                d3.select(this).style("fill", "white")
-            });
-        
-        let ele = svg.selectAll("path")
-                .data(json.features[1]);
+            }
 
-        ele.on("mouseover", function(d) {
-            ele.style("fill", "coral");
         });
     });
 
+
+
+    // zoom + pan
+    let zoom = d3.behavior.zoom() 
+        .on("zoom", function () {
+        svg.attr("transform", "translate(" + d3.event.translate + ")" + " scale(" + d3.event.scale + ")")
+        
+    });
+    
+
+    svg.call(zoom);
 });

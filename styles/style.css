@@ -4,6 +4,13 @@
 }
 
 .map {
-    padding-top: 10px;
-    margin-left: 18%;
+    position: absolute;
+    z-index: -1;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
 }
+
+

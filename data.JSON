@@ -10,12 +10,12 @@
                 "groups": {
                     "G1": {
                         "subject": "Système d'Exploitation Mobile",
-                        "loc": "TD 162",
+                        "loc": "162",
                         "prof": "OURAHMOUNE"
                     },
                     "G2": {
                         "subject": "TH JEU",
-                        "loc": "TD 118",
+                        "loc": "118",
                         "prof": "DAHMANI"
                     }
                 }
@@ -24,7 +24,7 @@
                 "time": "09:40 - 11:10",
                 "cours": {
                     "subject": "Visualisation de Données",
-                    "loc": "cours 135D",
+                    "loc": "135D",
                     "prof": "LARABI"
                 },
                 "groups": {}
@@ -33,7 +33,7 @@
                 "time": "11:20 - 12:50",
                 "cours": {
                     "subject": "Système d'Exploitation Mobile",
-                    "loc": "cours 117D",
+                    "loc": "117D",
                     "prof": "OURAHMOUNE"
                 },
                 "groups": {}
@@ -44,12 +44,12 @@
                 "groups": {
                     "G1": {
                         "subject": "Visualisation de Données",
-                        "loc": "TP TP128",
+                        "loc": "TP128",
                         "prof": "<no name>"
                     },
                     "G2": {
                         "subject": "Système d'Exploitation Mobile",
-                        "loc": "TP C4",
+                        "loc": "C4",
                         "prof": "OURAHMOUNE"
                     }
                 }
@@ -60,7 +60,7 @@
                 "groups": {
                     "G2": {
                         "subject": "Visualisation de Données",
-                        "loc": "TP 130",
+                        "loc": "130",
                         "prof": "OURAHMOUNE"
                     }
                 }
@@ -82,12 +82,12 @@
                 "groups": {
                     "G1": {
                         "subject": "Connaissances et Raisonnement",
-                        "loc": "TP C4",
+                        "loc": "C4",
                         "prof": "KHELLAF"
                     },
                     "G2": {
                         "subject": "Atelier Créatif",
-                        "loc": "TP C5",
+                        "loc": "C5",
                         "prof": "LARABI"
                     }
                 }
@@ -98,7 +98,7 @@
                 "groups": {
                     "G1": {
                         "subject": "Atelier Créatif",
-                        "loc": ":TP C5",
+                        "loc": "C5",
                         "prof": "LARABI"
                     },
                     "G2": {
@@ -114,7 +114,7 @@
                 "groups": {
                     "G1": {
                         "subject": "Synthèse d'Image",
-                        "loc": "::TP 132",
+                        "loc": "TP132",
                         "prof": "Dahmane"
                     }
                 }
@@ -125,7 +125,7 @@
                 "time": "08:00 - 09:30",
                 "cours": {
                     "subject": "GP",
-                    "loc": "cours 103D",
+                    "loc": "103D",
                     "prof": "HACHEMI"
                 },
                 "groups": {}
@@ -134,7 +134,7 @@
                 "time": "09:40 - 11:10",
                 "cours": {
                     "subject": "Synthèse d'Image",
-                    "loc": "cours 103D",
+                    "loc": "103D",
                     "prof": "Dahmane"
                 },
                 "groups": {}
@@ -150,7 +150,7 @@
                     },
                     "G2": {
                         "subject": "GP",
-                        "loc": "TP TP127",
+                        "loc": "TP127",
                         "prof": "BENSALAH"
                     }
                 }
@@ -161,7 +161,7 @@
                 "groups": {
                     "G1": {
                         "subject": "PROG RES",
-                        "loc": "TP C6",
+                        "loc": "C6",
                         "prof": "<no name>"
                     }
                 }
@@ -172,12 +172,12 @@
                 "groups": {
                     "G1": {
                         "subject": "GP",
-                        "loc": "TP C7",
+                        "loc": "C7",
                         "prof": "BENSALAH"
                     },
                     "G2": {
                         "subject": "PROG RES",
-                        "loc": "TP C6",
+                        "loc": "C6",
                         "prof": "<no name>"
                     }
                 }
@@ -190,12 +190,12 @@
                 "groups": {
                     "G1": {
                         "subject": "TH JEU",
-                        "loc": "TD 402",
+                        "loc": "402",
                         "prof": "DAHMANI"
                     },
                     "G2": {
                         "subject": "Système d'Exploitation Mobile",
-                        "loc": "TD 338",
+                        "loc": "338",
                         "prof": "OURAHMOUNE"
                     }
                 }
@@ -204,7 +204,7 @@
                 "time": "09:40 - 11:10",
                 "cours": {
                     "subject": "Connaissances et Raisonnement",
-                    "loc": "cours R4",
+                    "loc": "R4",
                     "prof": "KHELLAF"
                 },
                 "groups": {}
@@ -213,7 +213,7 @@
                 "time": "11:20 - 12:50",
                 "cours": {
                     "subject": "TH JEU",
-                    "loc": "cours D5",
+                    "loc": "D5",
                     "prof": "DAHMANI"
                 },
                 "groups": {}
@@ -224,12 +224,12 @@
                 "groups": {
                     "G1": {
                         "subject": "TH JEU",
-                        "loc": "TP C5",
+                        "loc": "C5",
                         "prof": "<no name>"
                     },
                     "G2": {
                         "subject": "Connaissances et Raisonnement",
-                        "loc": "TP C6",
+                        "loc": "C6",
                         "prof": "BELHADI HIBA"
                     }
                 }
@@ -240,7 +240,7 @@
                 "groups": {
                     "G2": {
                         "subject": "TH JEU",
-                        "loc": "TP C3A",
+                        "loc": "C3A",
                         "prof": "<no name>"
                     }
                 }
