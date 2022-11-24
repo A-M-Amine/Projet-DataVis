@@ -5,15 +5,16 @@
         "Sam": [],
         "Dim": [
             {
-                "time": "08:00 - 09:30",
                 "cours": {},
                 "groups": {
                     "G1": {
+                        "time": "08:00 - 09:30",
                         "subject": "Système d'Exploitation Mobile",
                         "loc": "162",
                         "prof": "OURAHMOUNE"
                     },
                     "G2": {
+                        "time": "08:00 - 09:30",
                         "subject": "TH JEU",
                         "loc": "118",
                         "prof": "DAHMANI"
@@ -21,8 +22,8 @@
                 }
             },
             {
-                "time": "09:40 - 11:10",
                 "cours": {
+                    "time": "09:40 - 11:10",
                     "subject": "Visualisation de Données",
                     "loc": "135D",
                     "prof": "LARABI"
@@ -30,8 +31,8 @@
                 "groups": {}
             },
             {
-                "time": "11:20 - 12:50",
                 "cours": {
+                    "time": "11:20 - 12:50",
                     "subject": "Système d'Exploitation Mobile",
                     "loc": "117D",
                     "prof": "OURAHMOUNE"
@@ -39,15 +40,16 @@
                 "groups": {}
             },
             {
-                "time": "13:00 - 14:30",
                 "cours": {},
                 "groups": {
                     "G1": {
+                        "time": "13:00 - 14:30",
                         "subject": "Visualisation de Données",
                         "loc": "TP128",
-                        "prof": "<no name>"
+                        "prof": "no name"
                     },
                     "G2": {
+                        "time": "13:00 - 14:30",
                         "subject": "Système d'Exploitation Mobile",
                         "loc": "C4",
                         "prof": "OURAHMOUNE"
@@ -55,21 +57,21 @@
                 }
             },
             {
-                "time": "14:40 - 16:10",
                 "cours": {},
                 "groups": {
                     "G2": {
+                        "time": "14:40 - 16:10",
                         "subject": "Visualisation de Données",
-                        "loc": "130",
-                        "prof": "OURAHMOUNE"
+                        "loc": "TP130",
+                        "prof": "no name"
                     }
                 }
             }
         ],
         "Lun": [
             {
-                "time": "08:00 - 09:30",
                 "cours": {
+                    "time": "08:00 - 09:30",
                     "subject": "PROG RES",
                     "loc": "cours SC",
                     "prof": "EL NAGGER"
@@ -77,15 +79,16 @@
                 "groups": {}
             },
             {
-                "time": "09:40 - 11:10",
                 "cours": {},
                 "groups": {
                     "G1": {
+                        "time": "09:40 - 11:10",
                         "subject": "Connaissances et Raisonnement",
                         "loc": "C4",
                         "prof": "KHELLAF"
                     },
                     "G2": {
+                        "time": "09:40 - 11:10",
                         "subject": "Atelier Créatif",
                         "loc": "C5",
                         "prof": "LARABI"
@@ -93,15 +96,16 @@
                 }
             },
             {
-                "time": "11:20 - 12:50",
                 "cours": {},
                 "groups": {
                     "G1": {
+                        "time": "11:20 - 12:50",
                         "subject": "Atelier Créatif",
                         "loc": "C5",
                         "prof": "LARABI"
                     },
                     "G2": {
+                        "time": "11:20 - 12:50",
                         "subject": "Synthèse d'Image",
                         "loc": "TP 128",
                         "prof": "Dahmane"
@@ -109,10 +113,10 @@
                 }
             },
             {
-                "time": "13:00 - 14:30",
                 "cours": {},
                 "groups": {
                     "G1": {
+                        "time": "13:00 - 14:30",
                         "subject": "Synthèse d'Image",
                         "loc": "TP132",
                         "prof": "Dahmane"
@@ -122,8 +126,8 @@
         ],
         "Mar": [
             {
-                "time": "08:00 - 09:30",
                 "cours": {
+                    "time": "08:00 - 09:30",
                     "subject": "GP",
                     "loc": "103D",
                     "prof": "HACHEMI"
@@ -131,8 +135,8 @@
                 "groups": {}
             },
             {
-                "time": "09:40 - 11:10",
                 "cours": {
+                    "time": "09:40 - 11:10",
                     "subject": "Synthèse d'Image",
                     "loc": "103D",
                     "prof": "Dahmane"
@@ -140,15 +144,16 @@
                 "groups": {}
             },
             {
-                "time": "11:20 - 12:50",
                 "cours": {},
                 "groups": {
                     "G1": {
+                        "time": "11:20 - 12:50",
                         "subject": "Système d'Exploitation Mobile",
                         "loc": "TP C5",
                         "prof": "OURAHMOUNE"
                     },
                     "G2": {
+                        "time": "11:20 - 12:50",
                         "subject": "GP",
                         "loc": "TP127",
                         "prof": "BENSALAH"
@@ -156,44 +161,46 @@
                 }
             },
             {
-                "time": "13:00 - 14:30",
                 "cours": {},
                 "groups": {
                     "G1": {
+                        "time": "13:00 - 14:30",
                         "subject": "PROG RES",
                         "loc": "C6",
-                        "prof": "<no name>"
+                        "prof": "no name"
                     }
                 }
             },
             {
-                "time": "14:40 - 16:10",
                 "cours": {},
                 "groups": {
                     "G1": {
+                        "time": "14:40 - 16:10",
                         "subject": "GP",
                         "loc": "C7",
                         "prof": "BENSALAH"
                     },
                     "G2": {
+                        "time": "14:40 - 16:10",
                         "subject": "PROG RES",
                         "loc": "C6",
-                        "prof": "<no name>"
+                        "prof": "no name"
                     }
                 }
             }
         ],
         "Mer": [
             {
-                "time": "08:00 - 09:30",
                 "cours": {},
                 "groups": {
                     "G1": {
+                        "time": "08:00 - 09:30",
                         "subject": "TH JEU",
                         "loc": "402",
                         "prof": "DAHMANI"
                     },
                     "G2": {
+                        "time": "08:00 - 09:30",
                         "subject": "Système d'Exploitation Mobile",
                         "loc": "338",
                         "prof": "OURAHMOUNE"
@@ -201,8 +208,9 @@
                 }
             },
             {
-                "time": "09:40 - 11:10",
+                
                 "cours": {
+                    "time": "09:40 - 11:10",
                     "subject": "Connaissances et Raisonnement",
                     "loc": "R4",
                     "prof": "KHELLAF"
@@ -210,8 +218,8 @@
                 "groups": {}
             },
             {
-                "time": "11:20 - 12:50",
                 "cours": {
+                    "time": "11:20 - 12:50",
                     "subject": "TH JEU",
                     "loc": "D5",
                     "prof": "DAHMANI"
@@ -219,15 +227,17 @@
                 "groups": {}
             },
             {
-                "time": "13:00 - 14:30",
+                
                 "cours": {},
                 "groups": {
                     "G1": {
+                        "time": "13:00 - 14:30",
                         "subject": "TH JEU",
                         "loc": "C5",
-                        "prof": "<no name>"
+                        "prof": "no name"
                     },
                     "G2": {
+                        "time": "13:00 - 14:30",
                         "subject": "Connaissances et Raisonnement",
                         "loc": "C6",
                         "prof": "BELHADI HIBA"
@@ -235,13 +245,13 @@
                 }
             },
             {
-                "time": "14:40 - 16:10",
                 "cours": {},
                 "groups": {
                     "G2": {
+                        "time": "14:40 - 16:10",
                         "subject": "TH JEU",
                         "loc": "C3A",
-                        "prof": "<no name>"
+                        "prof": "no name"
                     }
                 }
             }
