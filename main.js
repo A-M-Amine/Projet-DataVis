@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     //Width and height
-    let w = 920;
-    let h = 620;
+    let w = 860;
+    let h = 500;
     const margin = { top: 20, right: 20, bottom: 110, left: 55 }
 
     //Define map projection
@@ -112,6 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         if(day[ele].groups.hasOwnProperty('G1') && day[ele].groups.G1.loc == loc) {
                             details += getObjectDetails(day[ele].groups.G1)
                         }
+
                         if(day[ele].groups.hasOwnProperty('G2') && day[ele].groups.G2.loc == loc) {
                             details += getObjectDetails(day[ele].groups.G2)
                         }
