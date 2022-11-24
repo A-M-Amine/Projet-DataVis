@@ -1,14 +1,54 @@
+.navbar {
+    padding: 20px;
+    min-height: 80px;
+    background-color: #1f2122; 
+}
+
+
+[type='radio'] {
+    display: none; 
+}
+
+.navbar-nav {
+    padding: 0px 20px;
+}
+
+
+#pup {
+    color: #1f2122;
+    border-color: #1f2122;
+}
+
+#pup:hover{
+    background-color: #1f2122;
+    color: #1f2122;
+    border-color: #1f2122;
+}
+
+
+html, body {
+  background-color: #1f2122;  
+  background: #1f2122;
+}
 
 h2 {
     text-align: center;
     background-color: rgba(0, 109, 128, 0.295);
 }
 
+.box {
+    padding-top: 20px;
+    background-color: #1f2122;
+    
+}
 
 
 .box iframe {
-    margin: 0 auto;
-    background-color: rgba(103, 18, 182, 0.164);
+    background-color: #27292a;
+    padding: 60px;
+    border-radius: 23px;
+    margin: auto;
+
 }
 
 iframe {
