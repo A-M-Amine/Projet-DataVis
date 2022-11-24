@@ -1,21 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/home.css">
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/home.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/bootstrap.css" />
+    <script src="bootstrap/js/bootstrap.js"></script>
     <title>Doc</title>
 </head>
 
 <body>
-    
-<h2>Université des Sciences et de la Technologie Houari Boumediene</h2>
-    <div class="box">
-        
-        <iframe id= "frame" sandbox="allow-popups allow-scripts allow-forms allow-same-origin" src="viz.html" height="600" width="960" frameborder="0"></iframe>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand text.danger" href="#">MIV Schedule</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <button id="pup" class="btn btn-outline-success me-auto" type="submit">
+                    Search
+                </button>
+                <div class="btn-group btn-group-toggle navbar-nav" data-toggle="buttons">
+                    <label class="btn btn-danger active">
+                        <input type="radio" name="options" id="option1" autocomplete="off" checked> S1
+                    </label>
+                    <label class="btn btn-danger">
+                        <input type="radio" name="options" id="option2" autocomplete="off"> S2
+                    </label>
+                    
+                </div>
+                <ul class="navbar-nav me-right mb-2 mb-lg-0">
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Day
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Samedi</a></li>
+                            <li><a class="dropdown-item" href="#">Dimanche</a></li>
+                            <li><a class="dropdown-item" href="#">Lundi</a></li>
+                            <li><a class="dropdown-item" href="#">Mardi</a></li>
+                            <li><a class="dropdown-item" href="#">Mercredi</a></li>
+                            <li><a class="dropdown-item" href="#">Jeudi</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+                <button class="btn btn-danger" type="submit">
+                    Search
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="bg-dark">
+        <div class="box">
+            <iframe id="frame" sandbox="allow-popups allow-scripts allow-forms allow-same-origin" src="viz.html"
+                height="570" width="960" frameborder="0"></iframe>
+        </div>
     </div>
-    
+
 </body>
+
 </html>
