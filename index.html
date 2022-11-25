@@ -9,10 +9,13 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
     <link rel="stylesheet" href="styles/bootstrap.css" />
     <script src="bootstrap/js/bootstrap.js"></script>
+
     <title>Doc</title>
 </head>
 
 <body>
+
+
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand text.danger" href="#">MIV Schedule</a>
@@ -23,16 +26,15 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <button id="pup" class="btn btn-outline-success me-auto" type="submit">
-                    Search
                 </button>
                 <div class="btn-group btn-group-toggle navbar-nav" data-toggle="buttons">
                     <label class="btn btn-danger active">
                         <input type="radio" name="options" id="option1" autocomplete="off" checked> S1
                     </label>
-                    <label class="btn btn-danger">
-                        <input type="radio" name="options" id="option2" autocomplete="off"> S2
+                    <label class="btn btn-danger ">
+                        <input type="radio" name="options" id="option2" autocomplete="off" onclick=""> S2
                     </label>
-                    
+
                 </div>
                 <ul class="navbar-nav me-right mb-2 mb-lg-0">
 
@@ -42,18 +44,18 @@
                             Day
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Samedi</a></li>
-                            <li><a class="dropdown-item" href="#">Dimanche</a></li>
-                            <li><a class="dropdown-item" href="#">Lundi</a></li>
-                            <li><a class="dropdown-item" href="#">Mardi</a></li>
-                            <li><a class="dropdown-item" href="#">Mercredi</a></li>
-                            <li><a class="dropdown-item" href="#">Jeudi</a></li>
+                            <li><a class="dropdown-item" onclick="showGenre(this)">Samedi</a></li>
+                            <li><a class="dropdown-item" onclick="showGenre(this)">Dimanche</a></li>
+                            <li><a class="dropdown-item" onclick="showGenre(this)">Lundi</a></li>
+                            <li><a class="dropdown-item" onclick="showGenre(this)">Mardi</a></li>
+                            <li><a class="dropdown-item" onclick="showGenre(this)">Mercredi</a></li>
+                            <li><a class="dropdown-item" onclick="showGenre(this)">Jeudi</a></li>
 
                         </ul>
                     </li>
                 </ul>
-                <button class="btn btn-danger" type="submit">
-                    Search
+                <button class="btn btn-danger" type="submit" onclick="createSelection()">
+                    Go
                 </button>
             </div>
         </div>
@@ -64,6 +66,7 @@
                 height="570" width="960" frameborder="0"></iframe>
         </div>
     </div>
+    <script src="scripts/side.js"></script>
 
 </body>
 
