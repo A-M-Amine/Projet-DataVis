@@ -73,7 +73,7 @@
                 "cours": {
                     "time": "08:00 - 09:30",
                     "subject": "PROG RES",
-                    "loc": "cours SC",
+                    "loc": "SC",
                     "prof": "EL NAGGER"
                 },
                 "groups": {}
@@ -107,7 +107,7 @@
                     "G2": {
                         "time": "11:20 - 12:50",
                         "subject": "Synthèse d'Image",
-                        "loc": "TP 128",
+                        "loc": "TP128",
                         "prof": "Dahmane"
                     }
                 }
@@ -149,7 +149,7 @@
                     "G1": {
                         "time": "11:20 - 12:50",
                         "subject": "Système d'Exploitation Mobile",
-                        "loc": "TP C5",
+                        "loc": "C5",
                         "prof": "OURAHMOUNE"
                     },
                     "G2": {
