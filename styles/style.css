@@ -21,6 +21,7 @@
 
 
 #tooltip {
+    
     z-index: 1;
     display: flex;
     align-items: center;
@@ -28,20 +29,25 @@
     position: absolute;
     text-align: left;
     width: 180px;
-    height: 135px;
+    max-height: 405; 
     padding: 0px 15px;
     border-radius: 15px 50px;
-    background-color: #dc3545;
     background: #dc3545;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 16px;
 
+
+}
+
+#value {
+    margin-top: 0px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
 
 #tooltip.hidden {
     display: none;
     font-size: 12px;
+    
 }
 
 
