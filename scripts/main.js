@@ -43,8 +43,8 @@ function drawMap(semester_Nb, day_Str) {
 
 
 
-    d3.json("mapUSTHBen.geojson", function (json) {
-        d3.json("data.JSON", function (prog) {
+    d3.json("data/mapUSTHBen.geojson", function (json) {
+        d3.json("data/MIV-M2-S1.JSON", function (prog) {
 
 
             // scaling parameters
