@@ -1,5 +1,5 @@
 .cl1 {
-    fill: white;
+    fill: rgba(224, 185, 111, 0.822);
     stroke: black;
     stroke-width: 0.2px;
     z-index: -1;
@@ -17,7 +17,7 @@
 
 #USTHB {
 
-    fill: rgba(36, 190, 201, 0.651);
+    fill: rgba(26, 120, 207, 0.699);
 }
 
 
