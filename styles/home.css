@@ -1,12 +1,20 @@
 .navbar {
     padding: 20px;
     min-height: 80px;
-    background-color: #1f2122; 
+    background-color: #1f2122;
+}
+
+#scheduleBrand {
+
+    padding: 2px 0px 0px 55px;
+    font-size: 28px;
+    color: #dc3545;
+    
 }
 
 
 [type='radio'] {
-    display: none; 
+    display: none;
 }
 
 .navbar-nav {
@@ -19,16 +27,17 @@
     border-color: #1f2122;
 }
 
-#pup:hover{
+#pup:hover {
     background-color: #1f2122;
     color: #1f2122;
     border-color: #1f2122;
 }
 
 
-html, body {
-  background-color: #1f2122;  
-  background: #1f2122;
+html,
+body {
+    background-color: #1f2122;
+    background: #1f2122;
 }
 
 h2 {
@@ -39,7 +48,7 @@ h2 {
 .box {
     padding-top: 20px;
     background-color: #1f2122;
-    
+
 }
 
 
@@ -53,5 +62,6 @@ h2 {
 
 iframe {
     display: block;
-    border-style:none;
+    border-style: none;
 }
+
