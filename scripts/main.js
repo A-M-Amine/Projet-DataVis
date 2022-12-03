@@ -4,9 +4,12 @@ document.addEventListener('DOMContentLoaded', function () {
     
 
     let input = location.href.split('=')[1];
+
     
     if (input!= undefined) {
-        drawMap(1, input);
+
+        let level = location.href.split('=')[2];
+        drawMap(level, input);
     }
     
 
@@ -15,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-function drawMap(semester_Nb, day_Str) {
+function drawMap(level, day_Str) {
 
 
     //Width and height
@@ -34,12 +37,18 @@ function drawMap(semester_Nb, day_Str) {
         .projection(proj);
 
 
-
-
+    
+    let levelArray = ["data/M1_MIV.JSON","data/M2_MIV.JSON"]
+    let choice = levelArray[0]
+    if(level == "M1") {
+        choice = levelArray[0]
+    }else {
+        choice = levelArray[1]
+    }
 
 
     d3.json("data/USTHB_V11.geojson", function (json) {
-        d3.json("data/M2_MIV.JSON", function (prog) {
+        d3.json(choice, function (prog) {
 
 
             // scaling parameters
