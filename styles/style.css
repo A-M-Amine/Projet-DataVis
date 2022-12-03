@@ -1,6 +1,7 @@
 .cl1 {
     fill: white;
     stroke: black;
+    stroke-width: 0.2px;
     z-index: -1;
 }
 
