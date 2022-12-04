@@ -18,7 +18,9 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand text.danger" href="#"><p id= "scheduleBrand"><b>MIV Schedule</b></p></a>
+            <a class="navbar-brand text.danger" href="#">
+                <p id="scheduleBrand"><b>MIV Schedule</b></p>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -28,17 +30,17 @@
                 <button id="pup" class="btn btn-outline-success me-auto" type="submit">
                 </button>
                 <div class="btn-group btn-group-toggle navbar-nav" data-toggle="buttons">
-                    <div id="M1" class="btn btn-danger active" name = "masterIv" flag = "1">
+                    <div id="M1" class="btn btn-danger active" name="masterIv" flag="1">
                         M1
                     </div>
-                    <div id="M2" class="btn btn-danger" name = "masterIv" flag = "0">
+                    <div id="M2" class="btn btn-danger" name="masterIv" flag="0">
                         M2
                     </div>
                 </div>
                 <ul class="navbar-nav me-right mb-2 mb-lg-0">
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        <a class="nav-link dropdown-toggle" href="#" id="daysDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Day
                         </a>
@@ -56,11 +58,10 @@
                 <ul class="navbar-nav me-right mb-2 mb-lg-0">
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle  disabled" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Filter by Teacher
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="teacherFilterDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Filter by Teacher</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown" id="teachers">
+                            <li><a class="dropdown-item" onclick="showTeacherName(this)">None</a></li>
                         </ul>
                     </li>
                 </ul>
