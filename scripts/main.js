@@ -9,7 +9,8 @@ document.addEventListener('DOMContentLoaded', function () {
     if (input!= undefined) {
 
         let level = location.href.split('=')[2];
-        drawMap(level, input);
+        let filter = location.href.split('=')[3];
+        drawMap(level, input, filter);
     }
     
 
@@ -18,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-function drawMap(level, day_Str) {
+function drawMap(level, day_Str, filter) {
 
 
     //Width and height
@@ -38,17 +39,11 @@ function drawMap(level, day_Str) {
 
 
     
-    let levelArray = ["data/M1_MIV.JSON","data/M2_MIV.JSON"]
-    let choice = levelArray[0]
-    if(level == "M1") {
-        choice = levelArray[0]
-    }else {
-        choice = levelArray[1]
-    }
+
 
 
     d3.json("data/USTHB_V11.geojson", function (json) {
-        d3.json(choice, function (prog) {
+        d3.json(level, function (prog) {
 
 
             // scaling parameters
@@ -110,12 +105,45 @@ function drawMap(level, day_Str) {
 
             };
 
+            function highlightTeacher(day, teacher) {
+
+                for (ele in day) {
+                    if (Object.keys(day[ele].cours).length != 0) {
+                        if(day[ele].cours.prof == teacher) {
+                            id = day[ele].cours.loc
+                            d3.select("[id='" + id + "']")
+                                .style("fill", "#dc3545");
+                        }
+
+                    } else {
+                        if (day[ele].groups.hasOwnProperty('G1')) {
+
+                            if(day[ele].groups.G1.prof == teacher) {
+                                id = day[ele].groups.G1.loc
+
+                                d3.select("[id='" + id + "']")
+                                    .style("fill", "#dc3545");
+                            }
+                        }
+                        if (day[ele].groups.hasOwnProperty('G2')) {
+                            if(day[ele].groups.G2.prof == teacher) {
+                                id = day[ele].groups.G2.loc
+                                d3.select("[id='" + id + "']")
+                                    .style("fill", "#dc3545");
+                            }
+                        }
+
+                    }
+
+                }
+
+            };
+
 
             let mouseOn = function (d) {
 
                 let location = d3.select(this).attr("id");
                 let details = getLocDetails(prog.days[day_Str], location);
-                // insert function that gets the loc fro
 
                 if (details != "none") {
 
@@ -212,7 +240,14 @@ function drawMap(level, day_Str) {
             
             day = prog.days[day_Str];
 
-            highlightDay(day);
+            console.log(filter);
+            
+            if(filter == "None" || filter == "FilterbyTeacher") {
+                highlightDay(day);
+            }else {
+                highlightTeacher(day,filter);
+            }
+            
 
 
 
