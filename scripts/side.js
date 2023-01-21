@@ -1,11 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
 
 
-    
+    fillSchedule();
     let listInner = document.getElementsByName("masterIv");
     document.getElementsByName("masterIv").forEach(element => {
 
         element.addEventListener('click', (e) => {
+
 
             for (let i = 0; i < listInner.length; i += 1) {
                 if (listInner[i].id != element.id) {
@@ -13,9 +14,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     listInner[i].classList.remove("active")
                 }
             }
-
+            
+            
             element.setAttribute("flag","1")
             element.classList.add("active")
+            
             
         });
     })
@@ -27,10 +30,11 @@ function showGenre(item) {
     document.getElementById("daysDropdown").innerHTML = item.innerHTML;
 }
 
-function showTeacherName(item) {
-    document.getElementById("teacherFilterDropdown").innerHTML = item.innerHTML;
-}
 
+
+function setElementToItem(element, item) {
+    document.getElementById(element).innerHTML = item.innerHTML;
+}
 
 function createSelection() {
 
@@ -42,14 +46,13 @@ function createSelection() {
             level = element.id
         }
     });
+    
+    let spec = document.getElementById("ScheduleDropdown").innerHTML;
 
-    let levelArray = ["data/M1_MIV.JSON","data/M2_MIV.JSON"]
-    let choice = levelArray[0]
-    if(level == "M1") {
-        choice = levelArray[0]
-    }else {
-        choice = levelArray[1]
-    }
+    console.log(level+"_"+spec);
+
+    //let levelArray = ["data/Schedules/M1_MIV.JSON","data/Schedules/M2_MIV.JSON"]
+    let choice = "data/Schedules/" + level + "_" + spec + ".JSON"
 
     
     clearTeachers();
@@ -114,7 +117,7 @@ function populateTeachers(data, day) {
                     let el = document.createElement("li");
     
                     alink.textContent = element
-                    alink.setAttribute("onClick", "showTeacherName(this)")
+                    alink.setAttribute("onClick", "setElementToItem('teacherFilterDropdown',this)")
                     alink.classList.add("dropdown-item")
                     el.appendChild(alink);
     
@@ -129,7 +132,7 @@ function populateTeachers(data, day) {
             let el = document.createElement("li");
 
             alink.textContent = "None"
-            alink.setAttribute("onClick", "showTeacherName(this)")
+            alink.setAttribute("onClick", "setElementToItem('teacherFilterDropdown',this)")
             alink.classList.add("dropdown-item")
             el.appendChild(alink);
 
@@ -166,4 +169,25 @@ function itemInTeacherList(item) {
     });
 
     return false;
+}
+
+
+function fillSchedule() {
+
+    console.log("object");
+    let Schedules = ["MIV", "BIGDATA", "BIOINFO", "HPC", "IL", "SSI", "SII", "RSD"];
+    for (let i = 0; i < Schedules.length; i++) {
+        
+        let filterDropdown = document.getElementById("ScheduleList");
+        let alink =  document.createElement("a");
+        let el = document.createElement("li");
+
+        alink.textContent = Schedules[i];
+        alink.setAttribute("onClick", "setElementToItem('ScheduleDropdown', this)") 
+        alink.classList.add("dropdown-item")
+        el.appendChild(alink);
+        
+        filterDropdown.appendChild(el);
+
+    }
 }

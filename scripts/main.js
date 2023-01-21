@@ -116,6 +116,7 @@ function drawMap(level, day_Str, filter) {
                         }
 
                     } else {
+                        //TODO add G3 , G4
                         if (day[ele].groups.hasOwnProperty('G1')) {
 
                             if(day[ele].groups.G1.prof == teacher) {
@@ -240,7 +241,7 @@ function drawMap(level, day_Str, filter) {
             
             day = prog.days[day_Str];
 
-            console.log(filter);
+            
             
             if(filter == "None" || filter == "FilterbyTeacher") {
                 highlightDay(day);
